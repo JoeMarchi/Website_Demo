@@ -17,7 +17,10 @@
         <strong>Email</strong>:@Html.DisplayFor(modelItem => item.Email)<br />
         <strong>留言內容</strong>:<br />
         @Html.DisplayFor(modelItem => item.Content)<br />
+        @if (User.Identity.IsAuthenticated)
+        {
         @Html.ActionLink("刪除", "Delete", new { id = item.Id })
+        }
     </li>
 }
 </ul>

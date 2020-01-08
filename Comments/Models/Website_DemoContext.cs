@@ -20,5 +20,6 @@ namespace Comments.Models
         }
 
         public System.Data.Entity.DbSet<Comments.Models.Guestbook> Guestbooks { get; set; }
+        public System.Data.Entity.DbSet<Comments.Models.Member> Member { get; set; }
     }
 }

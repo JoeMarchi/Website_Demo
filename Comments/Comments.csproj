@@ -155,6 +155,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\GuestbookController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\MemberController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -162,9 +163,14 @@
     <Compile Include="Migrations\201912160300160_Initial.Designer.cs">
       <DependentUpon>201912160300160_Initial.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202001081503240_AddMemberModel.cs" />
+    <Compile Include="Migrations\202001081503240_AddMemberModel.Designer.cs">
+      <DependentUpon>202001081503240_AddMemberModel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Guestbook.cs" />
-    <Compile Include="Models\ProductCategory.cs" />
+    <Compile Include="Models\Member.cs" />
+    <Compile Include="Models\MemberLoginViewModel.cs" />
     <Compile Include="Models\Website_DemoContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -213,6 +219,8 @@
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Guestbook\Write.cshtml" />
     <Content Include="Views\Guestbook\Index.cshtml" />
+    <Content Include="Views\Member\Register.cshtml" />
+    <Content Include="Views\Member\Login.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -233,6 +241,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201912160300160_Initial.resx">
       <DependentUpon>201912160300160_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202001081503240_AddMemberModel.resx">
+      <DependentUpon>202001081503240_AddMemberModel.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
