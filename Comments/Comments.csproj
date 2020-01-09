@@ -167,6 +167,10 @@
     <Compile Include="Migrations\202001081503240_AddMemberModel.Designer.cs">
       <DependentUpon>202001081503240_AddMemberModel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202001090738030_addguestbook.cs" />
+    <Compile Include="Migrations\202001090738030_addguestbook.Designer.cs">
+      <DependentUpon>202001090738030_addguestbook.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Guestbook.cs" />
     <Compile Include="Models\Member.cs" />
@@ -189,6 +193,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <SubType>Designer</SubType>
     </Content>
+    <None Include="Properties\PublishProfiles\mvcguestbook - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\mvcguestbook - ReadOnly - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\mvcguestbook - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
@@ -244,6 +251,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202001081503240_AddMemberModel.resx">
       <DependentUpon>202001081503240_AddMemberModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202001090738030_addguestbook.resx">
+      <DependentUpon>202001090738030_addguestbook.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

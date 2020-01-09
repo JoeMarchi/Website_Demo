@@ -53,4 +53,10 @@
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
+<script>
+        $(function () {
+            $("#@Html.IdFor(model=>model.Email)").rules("add", { messages: { email: "請輸入Email地址" } });
+        });
+
+</script>
 }

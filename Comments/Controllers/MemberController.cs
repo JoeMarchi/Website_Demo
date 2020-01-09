@@ -35,7 +35,7 @@ namespace Comments.Controllers
 
                 db.Member.Add(member);
                 db.SaveChanges();
-                return RedirectToAction("index", "Guestbook");
+                return RedirectToAction("Login", "Member");
             }
             else
             {
@@ -63,8 +63,22 @@ namespace Comments.Controllers
                 }
                 else
                 {
+                    
                     return Redirect(returnUrl);
                 }
+            }
+            var chk_email = db.Member.Where(p => p.Email == email).FirstOrDefault();
+            var chk_pw = db.Member.Where(p => p.Password == password).FirstOrDefault();
+            if(chk_email!=null)
+            {
+                if (chk_pw == null)
+                {
+                    ViewBag.Errormsg = "密碼錯誤";
+                }
+            }
+            else
+            {
+                ViewBag.Errormsg = "查無此帳號";
             }
             return View();
         }

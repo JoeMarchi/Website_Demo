@@ -10,17 +10,17 @@
     @Html.ActionLink("留下訊息", "Write")
 </p>
 <ul>
-@foreach (var item in Model)
-{
-    <li>
-        <strong>姓名</strong>:@Html.DisplayFor(modelItem => item.Name)<br/>
-        <strong>Email</strong>:@Html.DisplayFor(modelItem => item.Email)<br />
-        <strong>留言內容</strong>:<br />
-        @Html.DisplayFor(modelItem => item.Content)<br />
-        @if (User.Identity.IsAuthenticated)
-        {
-        @Html.ActionLink("刪除", "Delete", new { id = item.Id })
-        }
-    </li>
-}
+    @foreach (var item in Model)
+    {
+        <li>
+            <strong>姓名</strong>:@Html.DisplayFor(modelItem => item.Name)<br />
+            <strong>Email</strong>:@Html.DisplayFor(modelItem => item.Email)<br />
+            <strong>留言內容</strong>:<br />
+            @Html.DisplayFor(modelItem => item.Content)<br />
+            @if (User.Identity.IsAuthenticated)
+            {
+                @Html.ActionLink("刪除", "Delete", new { id = item.Id })
+            }
+        </li>
+    }
 </ul>
